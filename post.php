@@ -45,7 +45,7 @@ include('header.php');
 			  <?foreach ($post->get_posts(0,99) as $p):?>
           <div class="content-1">
                 <a class="content-title-GP2" href="/<?=$p['url']?>"><h4><?=$p['name']?></h4></a>
-               <div class="contetn-text-GP2"><?=character_limiter(strip_tags($post['text']),240)?></div>
+               <div class="content-text-GP2"><?=character_limiter(strip_tags($post['text']),240)?></div>
             </div>
             <?if (strlen($p['img'])):?>
             <div class="content-2">
