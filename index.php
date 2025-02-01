@@ -24,7 +24,7 @@
                 </div>
                 <div class="info-section-distracted-block">
                     <h3 class="section-distracted-title">5 +</h3>
-                    <p class="section-distracted-text">Проектов: <a href="https://t.me/rise_of_drones" tatget="_blank"> ВОССТАНИЕ МАШИН</a>, <a href="https://www.instagram.com/coalition.factory.alakurd" tatget="_blank" >Производство Alakurd</a>, Арт-дивизон, <a href="https://t.me/freedom_coalition/812" tatget="_blank" >Помощь военным</a>, <a href="https://t.me/HeraldOfRebellion" tatget="_blank" >Вестник Восстания</a>...  </p>
+                    <p class="section-distracted-text">Проектов: <a href="https://t.me/rise_of_drones" target="_blank"> ВОССТАНИЕ МАШИН</a>, <a href="https://www.instagram.com/coalition.factory.alakurd" target="_blank" >Производство Alakurd</a>, Арт-дивизон, <a href="https://t.me/freedom_coalition/812" target="_blank" >Помощь военным</a>, <a href="https://t.me/HeraldOfRebellion" target="_blank" >Вестник Восстания</a>...  </p>
                 </div>
             </div>
         </div>
@@ -175,11 +175,5 @@
                 </div>
             </div>
         </div>
-
-
-
-
- 
-	
 	 
 <?include('footer.php');?>

@@ -13,10 +13,10 @@
                     </div>
                     <div class="section-contacts-blockitem-1-else-1">
                         <div class="contacts-main-item">Наши проекты</div>
-                        <div class="contacts-item"><a href="https://t.me/rise_of_drones" tatget="_blank"> ВОССТАНИЕ МАШИН</a></div>
-                        <div class="contacts-item"><a href="https://www.instagram.com/coalition.factory.alakurd" tatget="_blank" >Производство Alakurd</a></div>
-                        <div class="contacts-item"><a href="https://t.me/freedom_coalition/812" tatget="_blank" >Помощь военным</a></div>
-                        <div class="contacts-item"><a href="https://t.me/HeraldOfRebellion" tatget="_blank" >Вестник Восстания</a></div>
+                        <div class="contacts-item"><a href="https://t.me/rise_of_drones" target="_blank"> ВОССТАНИЕ МАШИН</a></div>
+                        <div class="contacts-item"><a href="https://www.instagram.com/coalition.factory.alakurd" target="_blank" >Производство Alakurd</a></div>
+                        <div class="contacts-item"><a href="https://t.me/freedom_coalition/812" target="_blank" >Помощь военным</a></div>
+                        <div class="contacts-item"><a href="https://t.me/HeraldOfRebellion" target="_blank" >Вестник Восстания</a></div>
                     </div> 
                 </div> 
             </div>
@@ -48,7 +48,7 @@
                     <div class="section-contacts-social"><?=l('Соцсети')?></div>
                     <a href="https://www.instagram.com/press.freedom.coalition" target="_blank"><img src="<?=$path?>icn/inst.svg" alt="logo image 1" class="section-contacts-SVG"></a>
                     <a href="https://t.me/freedom_coalition" target="_blank"><img src="<?=$path?>icn/telega.svg" alt="logo image 1" class="section-contacts-SVG"></a>
-                  <?/*  <a href="" target="_blank"><img src="<?=$path?>icn/faceb.svg" alt="logo image 1" class="section-contacts-SVG"></a>*/?>
+                  <a href="" target="_blank"><img src="<?=$path?>icn/faceb.svg" alt="logo image 1" class="section-contacts-SVG"></a>
                 </div>
             </div>
         </div>
@@ -58,10 +58,9 @@
     </div>
         
     </div>
-    <script src="<?=$path?>js/dropp.js"></script>
-    <script src="<?=$path?>js/burger-menu.js"></script>
-    
-    <script src="<?=$path?>js/topScroll.js"></script>
+    <script src="<?=$path?>js/dropDown.js" defer></script>
+    <script src="<?=$path?>js/burgerMenu.js" defer></script>
+    <script src="<?=$path?>js/topScroll.js" defer></script>
     </body>
     </html> 
      

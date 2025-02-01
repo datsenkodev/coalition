@@ -1,39 +1,35 @@
+<?php
+ini_set('memory_limit', '512M');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-	
     <meta name="description" content="<?=$description?>">
   	<meta name="keywords" content="<?=$keywords?>">
-    <title><?=$title?></title>
-    
-    <link rel="stylesheet" href="<?=$path?>css/burger.css?v=<?=time()?>">
-    <link rel="stylesheet" href="<?=$path?>cssTwoPage/newsTwoSolution.css">
-    
-    <link rel="stylesheet" href="<?=$path?>css/section-contacts.css">
-    
-    <link rel="stylesheet" href="<?=$path?>cssTwoPage/mainScreen.css">
-    
-    <link rel="stylesheet" href="<?=$path?>css/vizitka.css">
-    <link rel="stylesheet" href="<?=$path?>cssTwoPage/news-WR.css">
-    <link rel="icon" type="imagepng" sizes="16x16" href="/favicon-16x16.png">  
-    <link rel="stylesheet" href="<?=$path?>css/section-map.css">
-    <link rel="stylesheet" href="<?=$path?>css/section-achievements.css"> 
-    <link rel="stylesheet" href="<?=$path?>css/section-distracted.css">
-    <link rel="stylesheet" href="<?=$path?>css/section-news.css">
 
-    <link rel="stylesheet" href="<?=$path?>css/future.css">
-    
-    <link rel="stylesheet" href="<?=$path?>css/section-supportUs.css">
-    
-    <script src="<?=$path?>js/dropp-in-burger-menu.js"></script>
+    <title><?=$title?></title>
+
+    <link rel="stylesheet" href="./css/burger.css?v=<?=time()?>">
+    <link rel="stylesheet" href="./cssTwoPage/newsTwoSolution.css">
+    <link rel="stylesheet" href="./css/section-contacts.css">
+    <link rel="stylesheet" href="./cssTwoPage/mainScreen.css">
+    <link rel="stylesheet" href="./css/vizitka.css">
+    <link rel="stylesheet" href="./cssTwoPage/news-WR.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">  
+    <link rel="stylesheet" href="./css/section-map.css">
+    <link rel="stylesheet" href="./css/section-achievements.css"> 
+    <link rel="stylesheet" href="./css/section-distracted.css">
+    <link rel="stylesheet" href="./css/section-news.css">
+    <link rel="stylesheet" href="./css/future.css">
+    <link rel="stylesheet" href="./css/section-supportUs.css">
 </head>
 <body>
     <div class="main-header">
         <div class="logo">
-           <a href="/"> <img src="<?=$path?>icn/logo-black.svg" alt="logo" class="logo-image"></a>
+           <a href="/"><img src="./icn/logo-black.svg" alt="logo" class="logo-image"></a>
         </div>               
         <div class="btn-list">      
              <!-- Бургер-меню -->

@@ -1,0 +1,56 @@
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  .main-screen {
+    padding: 20px;
+  }
+  .title-screen {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .under-title-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .data-avtor {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .news-img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-screen {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .under-title-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .data-avtor {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-screen {
+    padding: 10px;
+  }
+  .title-screen {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .under-title-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .news-img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}
