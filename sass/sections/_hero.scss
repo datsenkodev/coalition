@@ -1,0 +1,28 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  & > div {
+    flex: 1 1 45%;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  align-self: stretch;
+  padding: 5rem;
+  background: #2a8bec;
+  & img {
+    height: 19rem;
+  }
+}
