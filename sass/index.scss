@@ -1,6 +1,8 @@
 @use './base/global';
 @use './base/reset';
 
+@use './sections/header';
 @use './sections/hero';
+@use './sections/stats';
 
 @use './base/medias';

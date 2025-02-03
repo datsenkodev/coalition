@@ -1,3 +1,6 @@
+#hero-section {
+  margin-block: 6rem 3rem;
+}
 .hero-container {
   display: flex;
   justify-content: center;
@@ -19,9 +22,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 1.25rem;
-  align-self: stretch;
   padding: 5rem;
   background: #2a8bec;
+  max-height: 31rem;
   & img {
     height: 19rem;
   }

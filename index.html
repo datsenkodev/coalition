@@ -7,7 +7,57 @@
     <link rel="stylesheet" href="./sass/index.css" />
   </head>
   <body>
-    <header>header</header>
+    <header>
+      <div class="container header-container">
+        <div class="logo-wrap">
+          <a href="/"><img src="./svg/logo-black.svg" alt="Логотип Коалиции" /></a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li><a href="/about">О нас</a></li>
+            <li class="dropdown-only">
+              <a href="/participants">Участники</a>
+              <div class="dropdown-content">
+                <div class="dropdown-grid">
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                  <a href="#">Contributor</a>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown-only">
+              <a href="/activity">Партизанские движения</a>
+              <div class="dropdown-content">
+                <div class="dropdown-grid">
+                  <a href="#">Движение один</a>
+                  <a href="#">Движение два</a>
+                  <a href="#">Движение три</a>
+                  <a href="#">Движение четыре</a>
+                  <a href="#">Движение пять</a>
+                  <a href="#">Движение шесть</a>
+                  <a href="#">Движение семь</a>
+                  <a href="#">Движение восемь</a>
+                  <a href="#">Движение девять</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/news">Новости</a></li>
+          </ul>
+          <a href="t.me/" class="btn white">Поддержите нас</a>
+          <select id="language-switcher" class="language-switcher">
+            <option value="ru">RU</option>
+            <option value="en">ENG</option>
+          </select>
+        </nav>
+      </div>
+    </header>
     <main>
       <section id="hero-section">
         <div class="container hero-container">
@@ -25,7 +75,31 @@
           </div>
         </div>
       </section>
+      <section class="stats">
+        <div class="container stats-container">
+          <div class="stats-item">
+            <h3>26 +</h3>
+            <p class="text">Национальных представительств и организаций</p>
+          </div>
+          <div class="stats-item">
+            <h3>7 +</h3>
+            <p class="text">Подпольно-освободительных движений</p>
+          </div>
+          <div class="stats-item">
+            <h3>5 +</h3>
+            <p class="text">
+              Проектов: <a href="https://t.me/rise_of_drones" tatget="_blank"> ВОССТАНИЕ МАШИН</a>,
+              <a href="https://www.instagram.com/coalition.factory.alakurd" tatget="_blank"
+                >Производство Alakurd</a
+              >, Арт-дивизон,
+              <a href="https://t.me/freedom_coalition/812" tatget="_blank">Помощь военным</a>,
+              <a href="https://t.me/HeraldOfRebellion" tatget="_blank">Вестник Восстания</a>...
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>footer</footer>
+    <script src="./js/dropDown.js" defer></script>
   </body>
 </html>

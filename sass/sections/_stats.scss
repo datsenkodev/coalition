@@ -1,0 +1,20 @@
+.stats {
+}
+
+.stats-container {
+  background-color: #fff;
+  border-radius: 1.25rem;
+  padding-block: 9rem;
+  display: flex;
+  gap: 1.75rem;
+  justify-content: space-between;
+}
+.stats-item {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  border-left: 2px solid #737373;
+  padding: 0 0 0 2rem;
+}
