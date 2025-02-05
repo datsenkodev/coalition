@@ -17,7 +17,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "GothamPro";
+  font-family: "Roboto";
   src: url("../../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.5rem, 1.1429rem + 1.7857vw, 2.75rem);
+  font-size: clamp(2.59rem, 1.97rem + 3.08vw, 4.75rem);
   line-height: 1;
 }
 
@@ -154,6 +154,12 @@ a {
 select {
   outline: none;
   border: none;
+}
+
+[class*=_container] {
+  max-width: 1440px;
+  padding: 0 clamp(1.22rem, 0.13875rem + 4.16vw, 3.875rem);
+  margin: 0 auto;
 }
 
 .header-container {
@@ -292,8 +298,203 @@ select {
   padding: 0 0 0 2rem;
 }
 
+.map {
+  margin: 5rem 0px 0px 0px;
+}
+
+.map-image {
+  margin: 3.75rem 1.75rem -2.5625rem 0.5625rem;
+}
+
+.map-container {
+  position: relative;
+  padding: 0;
+}
+
+.map-content {
+  position: absolute;
+  top: -60px;
+  left: 0;
+}
+.map-content h2 {
+  max-width: clamp(21.91rem, 16.69rem + 26.1vw, 40.25rem);
+  font-weight: 400;
+  line-height: 1;
+  text-align: left;
+}
+
+.achievement {
+  width: 100%;
+  margin: 6.25rem 0;
+}
+
+.achievement-container {
+  display: grid;
+  grid-template: "title btn" auto "cards-list cards-list" auto/1fr auto;
+  row-gap: 4rem;
+}
+@media (max-width: 768px) {
+  .achievement-container {
+    grid-template: "title" auto "cards-list" auto "btn" auto/1fr auto;
+    row-gap: 2rem;
+  }
+}
+.achievement-container h2 {
+  grid-area: title;
+  max-width: 39.875rem;
+  margin: 0 1.5rem 0 0;
+  align-self: flex-start;
+}
+@media (max-width: 768px) {
+  .achievement-container h2 {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+.achievement-btn {
+  grid-area: btn;
+  width: max-content;
+  align-self: flex-end;
+}
+@media (max-width: 768px) {
+  .achievement-btn {
+    justify-self: center;
+  }
+}
+
+.achievement-cards-list {
+  grid-area: cards-list;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1.75rem;
+}
+@media (max-width: 1024px) {
+  .achievement-cards-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media (max-width: 768px) {
+  .achievement-cards-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.achievement-card {
+  padding: 1.5rem 0px 0px 0px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: #ffffff;
+}
+.achievement-card img {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  border-radius: 1rem;
+  aspect-ratio: 125/78;
+  box-shadow: 0px 0px 5px 1px #e5e5e5;
+}
+.achievement-card h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.news {
+  width: 100%;
+  margin: 6.25rem 0;
+}
+
+.news-container {
+  display: grid;
+  grid-template: "title btn" auto "cards-list cards-list" auto/1fr auto;
+  row-gap: 4rem;
+}
+@media (max-width: 768px) {
+  .news-container {
+    grid-template: "title" auto "cards-list" auto "btn" auto/1fr auto;
+    row-gap: 2rem;
+  }
+}
+.news-container h2 {
+  grid-area: title;
+  max-width: 39.875rem;
+  margin: 0 1.5rem 0 0;
+  align-self: flex-start;
+}
+@media (max-width: 768px) {
+  .news-container h2 {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+.news-btn {
+  grid-area: btn;
+  width: max-content;
+  align-self: flex-end;
+}
+@media (max-width: 768px) {
+  .news-btn {
+    justify-self: center;
+  }
+}
+
+.news-cards-list {
+  grid-area: cards-list;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1.75rem;
+}
+@media (max-width: 768px) {
+  .news-cards-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.news-card {
+  padding: 1.5rem 0px 0px 0px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: #ffffff;
+}
+.news-card > img {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  border-radius: 1rem;
+  aspect-ratio: 125/78;
+  box-shadow: 0px 0px 5px 1px #e5e5e5;
+  object-fit: cover;
+}
+.news-card h4 {
+  margin: 0 0 0.5rem 0;
+}
+.news-card > p {
+  margin: 0 0 2rem 0;
+}
+
+.date-box {
+  width: max-content;
+  padding: 0.625rem 0.75rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.date-box img {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.375rem 0 0;
+}
+
 @media (max-width: 768px) {
   .hero-image {
     display: none;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

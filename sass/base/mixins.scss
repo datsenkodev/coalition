@@ -1,0 +1,5 @@
+[class*='_container'] {
+  max-width: 1440px;
+  padding: 0 clamp(1.22rem, 0.13875rem + 4.16vw, 3.875rem);
+  margin: 0 auto;
+}

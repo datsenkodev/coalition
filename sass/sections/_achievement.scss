@@ -1,0 +1,82 @@
+@use '../base/variables' as *;
+
+.achievement {
+  width: 100%;
+  margin: 6.25rem 0;
+}
+
+.achievement-container {
+  display: grid;
+  grid-template:
+    'title btn' auto
+    'cards-list cards-list' auto / 1fr auto;
+  row-gap: 4rem;
+
+  @media (max-width: 768px) {
+    grid-template:
+      'title' auto
+      'cards-list' auto
+      'btn' auto / 1fr auto;
+    row-gap: 2rem;
+  }
+
+  h2 {
+    grid-area: title;
+    max-width: 39.875rem;
+    margin: 0 1.5rem 0 0;
+    align-self: flex-start;
+
+    @media (max-width: 768px) {
+      justify-self: center;
+      text-align: center;
+    }
+  }
+}
+
+.achievement-btn {
+  grid-area: btn;
+  width: max-content;
+  align-self: flex-end;
+
+  @media (max-width: 768px) {
+    justify-self: center;
+  }
+}
+
+.achievement-cards-list {
+  grid-area: cards-list;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1.75rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.achievement-card {
+  padding: 1.5rem 0px 0px 0px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: $cardColor;
+
+  img {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+    border-radius: 1rem;
+    aspect-ratio: 125/78;
+    box-shadow: 0px 0px 5px 1px $shadowColor;
+  }
+
+  h4 {
+    margin: 0 0 0.5rem 0;
+  }
+}

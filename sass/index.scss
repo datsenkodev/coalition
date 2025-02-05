@@ -1,8 +1,12 @@
 @use './base/global';
 @use './base/reset';
+@use './base/mixins';
 
 @use './sections/header';
 @use './sections/hero';
 @use './sections/stats';
+@use './sections/map';
+@use './sections/achievement';
+@use './sections/news';
 
 @use './base/medias';
