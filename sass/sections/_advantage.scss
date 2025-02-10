@@ -1,0 +1,55 @@
+@use '../base/variables' as *;
+
+.advantage {
+  width: 100%;
+
+  &__container {
+    width: 100%;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+
+    &_proportion_half {
+      border-radius: 1.25rem;
+      background: $cardColor;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    margin: 3.125rem 0;
+    padding: 3.125rem 3.875rem;
+    border-radius: 1.25rem;
+    background: $cardColor;
+
+    &_proportion_half {
+    }
+  }
+
+  &__content {
+  }
+
+  &__label {
+    width: max-content;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.75rem;
+    background: $grayBgColor;
+    font-family: 'Montserrat', serif;
+    font-weight: 800;
+  }
+
+  &__number {
+    color: $mainColor;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__btn {
+  }
+
+  &__img {
+  }
+}

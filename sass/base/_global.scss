@@ -25,6 +25,47 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat-Black.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../fonts/Montserrat-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../fonts/Montserrat-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../fonts/Montserrat-Bold.woff') format('woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  src: url('../../fonts/Montserrat-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../../fonts/Montserrat-Black.woff2') format('woff2');
+}
 
 $mainColor: #1d1d22;
 $secondaryColor: #737373;
@@ -59,6 +100,8 @@ h6 {
   font-family: 'GothamPro', sans-serif;
   color: $mainColor;
   font-weight: 400;
+  font-family: 'Montserrat';
+  font-weight: 800;
 }
 
 h1 {
