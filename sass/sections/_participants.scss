@@ -1,11 +1,10 @@
 @use '../base/variables' as *;
 
-.achievement {
-  width: 100%;
+.participants {
   margin: 6.25rem 0;
 }
 
-.achievement-container {
+.participants-container {
   display: grid;
   grid-template:
     'title btn' auto
@@ -33,7 +32,7 @@
   }
 }
 
-.achievement-btn {
+.participants-btn {
   grid-area: btn;
   width: max-content;
   align-self: flex-end;
@@ -43,7 +42,7 @@
   }
 }
 
-.achievement-cards-list {
+.participants-cards-list {
   grid-area: cards-list;
   width: 100%;
   display: grid;
@@ -62,12 +61,16 @@
   }
 }
 
-.achievement-card {
+.participants-card {
   padding: 1.5rem 0px 0px 0px;
   padding: 1.5rem;
   border-radius: 20px;
   background: $cardColor;
+  transition: box-shadow 0.3s ease;
 
+  &:hover {
+    box-shadow: 0 0 20px #1d1d2252;
+  }
   img {
     width: 100%;
     margin: 0 0 1.5rem 0;

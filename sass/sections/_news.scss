@@ -62,12 +62,17 @@
   }
 }
 
-.news-card {
+.news-card a {
+  display: block;
   padding: 1.5rem 0px 0px 0px;
   padding: 1.5rem;
   border-radius: 20px;
   background: $cardColor;
+  transition: box-shadow 0.3s ease;
 
+  &:hover {
+    box-shadow: 0 0 20px #1d1d2252;
+  }
   & > img {
     width: 100%;
     margin: 0 0 1.5rem 0;
@@ -93,6 +98,10 @@
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
+
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: $text2Color;
 
   img {
     width: 1rem;
