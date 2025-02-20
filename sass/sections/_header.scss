@@ -1,3 +1,5 @@
+@use '../base/variables' as *;
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -9,19 +11,12 @@
 }
 .logo-wrap {
   width: 1.25rem;
-}
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  & .btn {
-    padding: 0.5rem 0.875rem;
-    font-size: 0.875rem;
-  }
+  flex: 0 0 auto;
 }
 
 .nav-menu {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   & li a {
@@ -30,29 +25,43 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
       Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
 .dropdown-only {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   position: relative;
+  max-width: 100%;
   &::after {
     content: url('../../img/icons/arrow.png');
     display: block;
     margin: 0 0 0 -0.2rem;
+    order: 2;
+    height: 1.375rem;
+    transition: all 0.3s ease;
   }
-  &.active .dropdown-content {
-    opacity: 1;
-    pointer-events: all;
+  &.active {
+    &::after {
+      transform: rotateX(180deg);
+    }
+    & .dropdown-content {
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 }
 
 .dropdown-content {
-  width: auto;
+  width: max-content;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -60,6 +69,7 @@
   background-color: #fff;
   border-radius: 0 0 1.25rem 1.25rem;
   padding: 1.5rem;
+  order: 3;
 }
 .dropdown-grid {
   display: grid;
@@ -67,6 +77,7 @@
   grid-template: auto 1fr / auto 1fr auto;
   & a {
     white-space: nowrap;
+    overflow: hidden;
     display: block;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -78,4 +89,154 @@
 
 .language-switcher {
   cursor: pointer;
+}
+
+/* Burger Menu Styles */
+
+.burger-icon {
+  display: none;
+  cursor: pointer;
+
+  & span {
+    position: relative;
+    margin-inline: auto;
+    transition: all 0.3s ease-in-out;
+    &:nth-child(1) {
+      top: 0;
+      transform: rotate(0);
+    }
+    &:nth-child(2) {
+      opacity: 1;
+      width: 100%;
+    }
+    &:nth-child(3) {
+      bottom: 0;
+      transform: rotate(0);
+    }
+  }
+  &.active span {
+    &:nth-child(1) {
+      top: 20%;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      width: 0;
+    }
+    &:nth-child(3) {
+      bottom: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* Horizontal navigation for larger screens */
+@media (min-width: 1025px) {
+  .burger-icon {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    z-index: 11;
+    cursor: pointer;
+
+    & span {
+      width: 100%;
+      height: 2px;
+      background: #000;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .nav-menu {
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-height: 100svh;
+    width: max-content;
+    max-width: 22rem;
+    background: #fff;
+    border-radius: 0 0 0 1rem;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 5rem 1.5rem 1.5rem;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+
+    &.active {
+      transform: translateX(0);
+    }
+    & li {
+      width: 100%;
+      text-align: center;
+      & a {
+        padding: 1rem;
+        order: 1;
+      }
+    }
+  }
+
+  .dropdown-only {
+    &.active {
+      & .dropdown-content {
+        max-height: max-content;
+        max-width: 100%;
+      }
+    }
+  }
+  .dropdown-content {
+    max-height: 0;
+    padding: 0;
+    position: static;
+    translate: unset;
+  }
+  .dropdown-grid {
+    display: grid;
+    gap: 0.5rem 1rem;
+    grid-template: auto 1fr / 1fr 1fr;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    display: none;
+  }
+
+  .nav-menu {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .burger-icon {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .nav-menu {
+    padding: 6rem 1rem 1rem;
+  }
 }

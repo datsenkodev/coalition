@@ -1,68 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const burgerIcon = document.querySelector(".burger-icon");
-    const burgerMenu = document.querySelector(".burger-menu");
-    const menuContent = document.querySelector(".burger-menu-content");
+document.addEventListener('DOMContentLoaded', function () {
+  const burgerIcon = document.querySelector('#burger-icon');
+  const navMenu = document.querySelector('#nav-menu');
 
-    // Переключение меню и скроллинга
+  if (burgerIcon && navMenu) {
+    // Toggle menu and scrolling
     function toggleMenu() {
-        burgerMenu.classList.toggle("active");
-        document.body.classList.toggle("no-scroll");
+      navMenu.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
     }
 
-    // Открытие/закрытие меню при клике на иконку
-    burgerIcon.addEventListener("click", function (e) {
-        e.stopPropagation(); // Предотвращаем закрытие при клике на иконку
-        toggleMenu();
+    // Open/close menu when clicking the icon
+    burgerIcon.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleMenu();
+      burgerIcon.classList.toggle('active');
     });
 
-    // Закрытие меню при клике вне его области
-    document.addEventListener("click", function (e) {
-        if (!burgerMenu.contains(e.target) && burgerMenu.classList.contains("active")) {
-            toggleMenu();
-        }
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!navMenu.contains(e.target) && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+      }
     });
 
-    // Обработка кликов по ссылкам в бургер-меню
-    const menuLinks = document.querySelectorAll(".burger-menu-content a");
+    // Handle clicks on menu links
+    const menuItems = navMenu.querySelectorAll('li');
 
-    menuLinks.forEach(link => {
-        // Если ссылка имеет класс .dropdown-arrow, раскрываем подменю, не сворачивая бургер-меню
-        if (link.classList.contains("dropdown-arrow")) {
-            link.addEventListener("click", function (e) {
-                e.preventDefault(); // Предотвращаем переход по ссылке
-                e.stopPropagation(); // Останавливаем всплытие события
-                
-                // Переключаем класс active на текущей ссылке для отображения подменю
-                this.classList.toggle('active');
-                
-                // Показываем или скрываем подменю
-                const subMenu = this.nextElementSibling;
-                if (subMenu && subMenu.classList.contains('sub-dropdown-menu')) {
-                    subMenu.classList.toggle('active');
-                }
-            });
-        } else {
-            // Для всех остальных ссылок закрываем бургер-меню при клике
-            link.addEventListener("click", function () {
-                toggleMenu();
-            });
-        }
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-        const burgerMenu = document.querySelector('.burger-menu');
-        const burgerIcon = burgerMenu.querySelector('.burger-icon');
-        const dropdownArrows = document.querySelectorAll('.dropdown-arrow');
-    
-        burgerIcon.addEventListener('click', () => {
-            burgerMenu.classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
+    menuItems.forEach((link) => {
+      if (link.classList.contains('dropdown-only')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          link.classList.contains('active')
+            ? link.classList.add('active')
+            : link.classList.remove('active');
         });
-    
-        dropdownArrows.forEach(arrow => {
-            arrow.addEventListener('click', () => {
-                arrow.classList.toggle('active');
-            });
+      } else {
+        link.addEventListener('click', function () {
+          toggleMenu();
         });
+      }
     });
-    
+  }
 });

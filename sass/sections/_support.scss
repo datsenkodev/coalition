@@ -69,3 +69,10 @@ span.support-label__popular {
     border: 1px solid #fff;
   }
 }
+
+@media (max-width: 979px) {
+  .support__cards {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

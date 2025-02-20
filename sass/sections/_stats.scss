@@ -18,3 +18,27 @@
   border-left: 2px solid #737373;
   padding: 0 0 0 2rem;
 }
+
+@media (max-width: 979px) {
+  .stats-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-block: 3rem;
+  }
+  .stats-item {
+    max-width: 35%;
+    &:nth-child(2) {
+      margin-inline: auto;
+    }
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .stats-container .stats-item {
+    margin: unset;
+    max-width: 100%;
+  }
+}

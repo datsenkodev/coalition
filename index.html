@@ -13,10 +13,15 @@
           <a href="/"><img src="./svg/logo-black.svg" alt="Логотип Коалиции" /></a>
         </div>
         <nav class="nav">
-          <ul class="nav-menu">
+          <div id="burger-icon" class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu" id="nav-menu">
             <li><a href="/about">О нас</a></li>
             <li class="dropdown-only">
-              <a href="/advantage">Участники</a>
+              <a>Участники</a>
               <div class="dropdown-content">
                 <div class="dropdown-grid">
                   <a href="#">Contributor</a>
@@ -32,7 +37,7 @@
               </div>
             </li>
             <li class="dropdown-only">
-              <a href="/activity">Партизанские движения</a>
+              <a>Партизанские движения</a>
               <div class="dropdown-content">
                 <div class="dropdown-grid">
                   <a href="#">Движение один</a>
@@ -49,12 +54,14 @@
             </li>
             <li><a href="/contacts">Контакты</a></li>
             <li><a href="/news">Новости</a></li>
+            <li><a href="t.me/" class="btn white">Поддержите нас</a></li>
+            <li>
+              <select id="language-switcher" class="language-switcher">
+                <option value="ru">RU</option>
+                <option value="en">ENG</option>
+              </select>
+            </li>
           </ul>
-          <a href="t.me/" class="btn white">Поддержите нас</a>
-          <select id="language-switcher" class="language-switcher">
-            <option value="ru">RU</option>
-            <option value="en">ENG</option>
-          </select>
         </nav>
       </div>
     </header>
@@ -394,5 +401,6 @@
       </div>
     </footer>
     <script src="./js/dropDown.js" defer></script>
+    <script src="./js/burgerMenu.js" defer></script>
   </body>
 </html>
