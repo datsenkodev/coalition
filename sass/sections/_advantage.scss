@@ -61,12 +61,6 @@
     color: $mainColor;
   }
 
-  &__title {
-  }
-
-  &__description {
-  }
-
   &__btn {
     margin: 4.125rem 0 0 0;
     align-self: flex-start;
@@ -83,5 +77,25 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .advantage__card:nth-child(even) {
+    & .advantage__content {
+      align-items: flex-end;
+    }
+    & .text {
+      text-align: right;
+    }
+    & .advantage__btn {
+      align-self: flex-end;
+    }
+  }
+  .advantage__content {
+    max-width: unset;
+  }
+  .advantage__img {
+    display: none;
   }
 }

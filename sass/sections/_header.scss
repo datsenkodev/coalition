@@ -20,6 +20,7 @@
   align-items: center;
   gap: 0.5rem;
   & li a {
+    cursor: pointer;
     display: block;
     padding: 0.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -231,11 +232,6 @@
 }
 
 @media (max-width: 480px) {
-  .burger-icon {
-    top: 1rem;
-    right: 1rem;
-  }
-
   .nav-menu {
     padding: 6rem 1rem 1rem;
   }
