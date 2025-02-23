@@ -124,6 +124,11 @@ h4 {
   line-height: 1;
   color: $darkColor;
 }
+
+::selection {
+  background-color: #2a8bec54;
+}
+
 .btn {
   display: block;
   padding: 1rem 1.25rem;
