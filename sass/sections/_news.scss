@@ -51,11 +51,6 @@
   grid-template-rows: auto;
   gap: 1.75rem;
 
-  //  @media (max-width: 1024px) {
-  //    grid-template-columns: repeat(2, 1fr);
-  //    grid-template-rows: auto;
-  //  }
-
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -73,6 +68,7 @@
   &:hover {
     box-shadow: 0 0 20px #1d1d2252;
   }
+
   & > img {
     width: 100%;
     margin: 0 0 1.5rem 0;

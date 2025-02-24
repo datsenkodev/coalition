@@ -1,6 +1,5 @@
 @use './base/global';
 @use './base/reset';
-@use './base/mixins';
 
 @use './sections/header';
 @use './sections/hero';
@@ -13,5 +12,3 @@
 @use './sections/footer';
 
 @use './pages/newsPage';
-
-@use './base/medias';

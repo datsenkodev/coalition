@@ -174,6 +174,23 @@ h4 {
   color: #1d1d22;
 }
 
+[class*=_container] {
+  max-width: 1440px;
+  padding: 0 clamp(1.22rem, 0.13875rem + 4.16vw, 3.875rem);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .stats,
+  .map,
+  .participants,
+  .news,
+  .support,
+  .advantage {
+    margin: 4.5rem 0 0;
+  }
+}
 :root {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -208,12 +225,6 @@ a {
 select {
   outline: none;
   border: none;
-}
-
-[class*=_container] {
-  max-width: 1440px;
-  padding: 0 clamp(1.22rem, 0.13875rem + 4.16vw, 3.875rem);
-  margin: 0 auto;
 }
 
 .header-container {
@@ -476,20 +487,20 @@ select {
   }
 }
 .stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.75rem;
   background-color: #fff;
   border-radius: 1.25rem;
   padding-block: 9rem;
-  display: flex;
-  gap: 1.75rem;
-  justify-content: space-between;
 }
 
 .stats-item {
-  flex: 1 1 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
+  flex: 1 1 30%;
   border-left: 2px solid #737373;
   padding: 0 0 0 2rem;
 }
@@ -732,10 +743,6 @@ select {
   width: 100%;
   padding-top: 3.125rem;
   padding-bottom: 3.125rem;
-}
-.advantage__container_proportion_half {
-  border-radius: 1.25rem;
-  background: #ffffff;
 }
 .advantage__card {
   padding: 3.125rem 3.875rem;
@@ -1065,16 +1072,5 @@ span.support-label__popular {
   }
   .news-content {
     margin: 1rem 0 4.25rem 0;
-  }
-}
-@media (max-width: 768px) {
-  .hero-section,
-  .stats,
-  .map,
-  .participants,
-  .news,
-  .support,
-  .advantage {
-    margin: 4.5rem 0 0;
   }
 }/*# sourceMappingURL=index.css.map */

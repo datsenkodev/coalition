@@ -9,6 +9,7 @@
   border-radius: 0 0 1.25rem 1.25rem;
   padding: 1.5rem 3.75rem;
 }
+
 .logo-wrap {
   width: 1.25rem;
   flex: 0 0 auto;
@@ -19,8 +20,10 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+
   & li {
     cursor: pointer;
+
     & a {
       display: block;
       padding: 0.5rem;
@@ -41,6 +44,7 @@
   flex-wrap: wrap;
   position: relative;
   max-width: 100%;
+
   &::after {
     content: url('../../img/icons/arrow.png');
     display: block;
@@ -49,10 +53,12 @@
     height: 1.375rem;
     transition: all 0.3s ease;
   }
+
   &.active {
     &::after {
       transform: rotateX(180deg);
     }
+
     & .dropdown-content {
       opacity: 1;
       pointer-events: all;
@@ -74,6 +80,7 @@
   padding: 1.5rem;
   order: 3;
 }
+
 .dropdown-grid {
   display: grid;
   gap: 1.25rem 2rem;
@@ -104,28 +111,34 @@
     position: relative;
     margin-inline: auto;
     transition: all 0.3s ease-in-out;
+
     &:nth-child(1) {
       top: 0;
       transform: rotate(0);
     }
+
     &:nth-child(2) {
       opacity: 1;
       width: 100%;
     }
+
     &:nth-child(3) {
       bottom: 0;
       transform: rotate(0);
     }
   }
+
   &.active span {
     &:nth-child(1) {
       top: 20%;
       transform: rotate(45deg);
     }
+
     &:nth-child(2) {
       opacity: 0;
       width: 0;
     }
+
     &:nth-child(3) {
       bottom: 50%;
       transform: rotate(-45deg);
@@ -188,9 +201,11 @@
     &.active {
       transform: translateX(0);
     }
+
     & li {
       width: 100%;
       text-align: center;
+
       & a {
         padding: 1rem;
         order: 1;
@@ -206,12 +221,14 @@
       }
     }
   }
+
   .dropdown-content {
     max-height: 0;
     padding: 0;
     position: static;
     translate: unset;
   }
+
   .dropdown-grid {
     display: grid;
     gap: 0.5rem 1rem;

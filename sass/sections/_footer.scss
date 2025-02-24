@@ -10,9 +10,11 @@
   &__list-container {
     display: flex;
     gap: 2rem;
+
     & .footer__list {
       flex: 0 1 9rem;
       gap: 1rem;
+
       & li:first-child {
         font-weight: 700;
         font-size: 1rem;
@@ -25,20 +27,24 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+
     & li {
       font-weight: 400;
       font-size: 0.875rem;
       color: $mainColor;
       flex: 0 0 auto;
+
       & a {
         display: flex;
         align-items: center;
         gap: 1rem;
+
         &:hover {
           text-decoration: underline;
         }
       }
     }
+
     &.socials {
       & img {
         height: 2.25rem;
@@ -51,6 +57,7 @@
       }
     }
   }
+
   &__copyright {
     margin: 1.75rem 0 1.75rem 0;
     background-color: #fff;
@@ -58,9 +65,11 @@
     border-radius: 1.25rem;
   }
 }
+
 .footer-container {
   gap: 1rem;
 }
+
 .footer-block {
   display: flex;
   flex-direction: column;
@@ -84,9 +93,11 @@
       align-items: center;
       gap: 5rem;
     }
+
     & .footer-block:nth-child(2) {
       grid-area: 2 / 1 / 3 / 2;
     }
+
     & .footer-block:last-child {
       grid-area: 2 / 2 / 3 / 3;
     }
@@ -106,8 +117,10 @@
   .footer__content {
     display: flex;
     flex-direction: column;
+
     & .footer-block:first-child .footer__list-container {
       flex-wrap: wrap;
+
       & .footer__list {
         flex: 1 1 auto;
       }

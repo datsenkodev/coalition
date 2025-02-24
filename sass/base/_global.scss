@@ -1,3 +1,5 @@
+@use '../base/variables' as *;
+
 @font-face {
   font-family: 'GothamPro';
   src: url('../../fonts/GothamProRegular.woff') format('woff'),
@@ -67,10 +69,6 @@
   src: url('../../fonts/Montserrat-Black.woff2') format('woff2');
 }
 
-$mainColor: #1d1d22;
-$secondaryColor: #737373;
-$darkColor: #2d2e2e;
-
 body {
   min-width: 320px;
   min-height: 100svh;
@@ -93,6 +91,7 @@ a {
     color: $darkColor;
   }
 }
+
 h1,
 h2,
 h3,
@@ -141,17 +140,21 @@ h4 {
   font-weight: 500;
   line-height: 110%;
   text-align: center;
+
   &.white {
     color: $mainColor;
     background-color: #fff;
+
     &:hover {
       color: #fff;
       background-color: $mainColor;
     }
   }
+
   &.black {
     color: #fff;
     background-color: $mainColor;
+
     &:hover {
       color: $mainColor;
       background-color: #fff;
@@ -172,8 +175,26 @@ h4 {
   font-weight: 400;
   line-height: 150%;
   text-align: left;
-  color: $secondaryColor;
+  color: $text2Color;
   &.black {
     color: $mainColor;
+  }
+}
+
+[class*='_container'] {
+  max-width: 1440px;
+  padding: 0 clamp(1.22rem, 0.13875rem + 4.16vw, 3.875rem);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .stats,
+  .map,
+  .participants,
+  .news,
+  .support,
+  .advantage {
+    margin: 4.5rem 0 0;
   }
 }

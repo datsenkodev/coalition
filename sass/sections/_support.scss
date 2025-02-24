@@ -6,6 +6,7 @@
     text-align: center;
     margin: 0 0 4rem 0;
   }
+
   &__cards {
     display: flex;
     align-items: center;
@@ -26,6 +27,7 @@
     }
   }
 }
+
 .support-label span {
   border-radius: 0.5rem;
   padding: 0.625rem 0.75rem;
@@ -36,6 +38,7 @@
   font-weight: 800;
   font-size: 1rem;
 }
+
 span.support-label__popular {
   font-size: 1rem;
   color: $blueColor;
@@ -57,14 +60,17 @@ span.support-label__popular {
     align-self: stretch;
     display: flex;
     justify-content: space-between;
+
     & span:not(.support-label__popular) {
       background: #303035;
     }
   }
+
   & .support-label,
   h4 {
     color: #fff;
   }
+
   & .btn {
     border: 1px solid #fff;
   }

@@ -18,33 +18,40 @@
 .main-title {
   font-size: clamp(2.59rem, 1.97rem + 3.08vw, 4.75rem);
 }
+
 .sub-title {
   font-size: 1.25rem;
   line-height: 120%;
 }
+
 .news-details {
   display: flex;
   gap: 1.25rem;
+
   & .date-box,
   .author-box {
     background-color: #fff;
   }
 }
+
 .news-image {
   border-radius: 1.25rem;
   overflow: hidden;
   text-align: center;
+
   & img {
     width: 100%;
     object-fit: cover;
   }
 }
+
 .news-content {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   margin: 3rem 0 6.25rem 0;
 }
+
 .news-item {
   border-radius: 1.25rem;
   padding: 32px;
@@ -52,6 +59,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+
   & h4 {
     margin-bottom: -0.5rem;
   }
@@ -61,6 +69,7 @@
   .news-title {
     margin: 6.25rem 0 1rem 0;
   }
+
   .news-content {
     margin: 1rem 0 4.25rem 0;
   }
