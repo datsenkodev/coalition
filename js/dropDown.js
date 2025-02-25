@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownButtons = document.querySelectorAll('.dropdown-only');
 
   dropdownButtons.forEach((button) => {
-    button.addEventListener('click', function (event) {
-      event.preventDefault();
-
+    button.addEventListener('click', function () {
       const isActive = this.classList.contains('active');
 
       closeAllDropdowns();
@@ -14,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.addEventListener('click', function (event) {
+  document.addEventListener('click', (event) => {
     if (!event.target.closest('.dropdown-only')) {
       closeAllDropdowns();
     }
@@ -26,14 +24,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-// document.addEventListener('DOMContentLoaded', () => {
-// const burger = document.querySelector('.burger');
-// const burgerMenuContent = document.querySelector('.burger-menu-content');
-
-// burger.addEventListener('click', () => {
-//   burger.classList.toggle('active');
-//   burgerMenuContent.classList.toggle('active');
-//   document.body.classList.toggle('no-scroll');
-// });
-// });

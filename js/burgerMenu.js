@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const burgerIcon = document.querySelector('#burger-icon');
   const navMenu = document.querySelector('#nav-menu');
 
@@ -10,34 +10,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Open/close menu when clicking the icon
-    burgerIcon.addEventListener('click', function (e) {
+    burgerIcon.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleMenu();
       burgerIcon.classList.toggle('active');
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && navMenu.classList.contains('active')) {
         navMenu.classList.remove('active');
       }
     });
 
     // Handle clicks on menu links
-    const menuItems = navMenu.querySelectorAll('li');
-
+    const menuItems = navMenu.querySelectorAll('li > a');
+    console.log(menuItems);
     menuItems.forEach((link) => {
       if (link.classList.contains('dropdown-only')) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-
-          link.classList.contains('active')
-            ? link.classList.add('active')
-            : link.classList.remove('active');
+        link.addEventListener('click', () => {
+          link.classList.toggle('active');
         });
       } else {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', () => {
           toggleMenu();
         });
       }
