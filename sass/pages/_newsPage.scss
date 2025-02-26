@@ -6,7 +6,7 @@
 }
 
 .news-title {
-  margin: 6.25rem 0 3rem 0;
+  margin: 4.25rem 0 3rem 0;
 
   & .container {
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .main-title {
-  font-size: clamp(2.59rem, 1.97rem + 3.08vw, 4.75rem);
+  font-size: clamp(1.5rem, 1.1429rem + 1.7857vw, 2.75rem);
 }
 
 .sub-title {
@@ -74,7 +74,7 @@
 
 @media (max-width: 480px) {
   .news-title {
-    margin: 6.25rem 0 1rem 0;
+    margin: 4.25rem 0 1rem 0;
   }
 
   .news-content {
