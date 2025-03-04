@@ -18,6 +18,10 @@
   gap: 1.5rem;
 }
 
+.main-title {
+  font-size: clamp(3rem, 1.8929rem + 5.5357vw, 6.875rem);
+}
+
 .hero-image {
   display: flex;
   align-items: center;

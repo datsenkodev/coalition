@@ -98,7 +98,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(3rem, 1.8929rem + 5.5357vw, 6.875rem);
+  font-size: clamp(1.5rem, 1.1429rem + 1.7857vw, 2.75rem);
   line-height: 1;
 }
 
@@ -467,6 +467,10 @@ select {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.main-title {
+  font-size: clamp(3rem, 1.8929rem + 5.5357vw, 6.875rem);
 }
 
 .hero-image {
@@ -957,6 +961,11 @@ span.support-label__popular {
   border-radius: 1.25rem;
 }
 
+.small-icon {
+  width: 1rem;
+  height: unset;
+}
+
 .footer-container {
   gap: 1rem;
 }
@@ -1023,10 +1032,6 @@ span.support-label__popular {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-}
-
-.main-title {
-  font-size: clamp(1.5rem, 1.1429rem + 1.7857vw, 2.75rem);
 }
 
 .sub-title {
